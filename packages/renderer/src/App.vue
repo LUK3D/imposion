@@ -1,54 +1,26 @@
 <script lang="ts" setup>
-import ReactiveCounter from '/@/components/ReactiveCounter.vue';
-import ReactiveHash from '/@/components/ReactiveHash.vue';
-import ElectronVersions from '/@/components/ElectronVersions.vue';</script>
-
+// import ReactiveCounter from '/@/components/ReactiveCounter.vue';
+import Header from '/@/components/Header.vue';
+import Bottom   from '/@/components/Bottom.vue';
+</script>
 <template>
-  <img
-    alt="Vue logo"
-    src="../assets/logo.svg"
-    width="150"
-  >
-
-  <p>
-    For a guide and recipes on how to configure / customize this project,<br>
-    check out the
-    <a
-      href="https://github.com/cawa-93/vite-electron-builder"
-      target="_blank"
-    >vite-electron-builder documentation</a>.
-  </p>
-
-  <fieldset>
-    <legend>Test Vue Reactivity</legend>
-    <reactive-counter />
-  </fieldset>
-
-  <fieldset>
-    <legend>Test Node.js API</legend>
-    <reactive-hash />
-  </fieldset>
-
-  <fieldset>
-    <legend>Environment</legend>
-    <electron-versions />
-  </fieldset>
-
-  <p>
-    Edit
-    <code>packages/renderer/src/App.vue</code> to test hot module replacement.
-  </p>
+  <div class="w-screen h-screen bg-gray-700 flex flex-col">
+    <Header />
+    <div class="body h-full w-full grid grid-cols-12">
+      <div class="sideMenu h-full col-span-2  flex">
+        <div class="tabs h-full w-10 bg-gray-800" />
+      </div>
+      <div class="work-area h-full w-full col-span-10 bg-gray-200 " />
+    </div>
+    <Bottom />
+    <div class="footer h-10 w-full bg-gray-800" />
+  </div>
 </template>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin: 60px auto;
-  max-width: 700px;
+  width: 100vw;
+  height: 100vh;
 }
 fieldset {
   margin: 2rem;
