@@ -5,9 +5,10 @@ import {URL} from 'url';
 async function createWindow() {
   const browserWindow = new BrowserWindow({
     show: false, // Use 'ready-to-show' event to show window
-    fullscreen:true,
+    fullscreen:false,
+    
     webPreferences: {
-      devTools:false,
+      // devTools:false,
       nativeWindowOpen: true,
       webviewTag: false, // The webview tag is not recommended. Consider alternatives like iframe or Electron's BrowserView. https://www.electronjs.org/docs/latest/api/webview-tag#warning
       preload: join(__dirname, '../../preload/dist/index.cjs'),
@@ -22,6 +23,7 @@ async function createWindow() {
    */
   browserWindow.on('ready-to-show', () => {
     browserWindow?.show();
+    browserWindow?.maximize();
 
     if (import.meta.env.DEV) {
       browserWindow?.webContents.openDevTools();
