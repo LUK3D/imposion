@@ -78,7 +78,7 @@ import Bottom   from '/@/components/Bottom.vue';
       <div class="work-area h-full w-full col-span-10 bg-gray-200 " />
     </div>
     <Bottom />
-    <div class="footer h-10 w-full bg-gray-800" />
+    <div class="footer h-10 w-full bg-gray-900" />
   </div>
 </template>
 

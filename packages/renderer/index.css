@@ -4,7 +4,7 @@
 
 /* width */
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
     height: 5px;
     background: rgb(55 65 81 / var(--tw-bg-opacity));
   }
@@ -24,3 +24,5 @@
   *::-webkit-scrollbar-thumb:hover {
     background: rgb(219 39 119 );
   }
+
+  

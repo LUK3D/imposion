@@ -11,3 +11,5 @@ Animation editor for nex level websites
 <img src="./screenshots/Screenshot01.png">
 
 > Imposion first screen-shot
+
+Ao compilar, deve se copiar os arquivos tailwind.config.js e postcss.config.js para a unidade renderer dentro de packages
